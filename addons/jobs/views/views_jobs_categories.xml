@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+ 
+    <record model="ir.ui.view" id="jobs.job_categories_list">
+      <field name="name">job_categories list</field>
+      <field name="model">jobs.job_category</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="code"/>
+          <field name="job_position_ids"/>
+        </list>
+      </field>
+    </record>
+ 
+ 
+    <!-- actions opening views on models -->
+ 
+    <record model="ir.actions.act_window" id="jobs.job_categories_action_window">
+      <field name="name">job_categories window</field>
+      <field name="res_model">jobs.job_category</field>
+      <field name="view_mode">list,form</field>
+    </record>
+ 
+ 
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="modul_choose.action_server">
+      <field name="name">modul_choose server</field>
+      <field name="model_id" ref="model_modul_choose_modul_choose"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+ 
+    <!-- Top menu item -->
+ 
+    <menuitem name="jobs" id="jobs.menu_root"/>
+ 
+    <!-- menu categories -->
+ 
+    <menuitem name="Job Categories" id="jobs.job_categories_menu_1" parent="jobs.menu_root"/>
+    <!-- <menuitem name="Menu 2" id="modul_choose.menu_2" parent="modul_choose.menu_root"/> -->
+ 
+    <!-- actions -->
+ 
+    <menuitem name="List" id="jobs.job_categories_menu_1_list" parent="jobs.job_categories_menu_1"
+              action="jobs.job_categories_action_window"/>
+    <!-- <menuitem name="Server to list" id="modul_choose" parent="modul_choose.menu_2"
+              action="modul_choose.action_server"/> -->
+  </data>
+</odoo>

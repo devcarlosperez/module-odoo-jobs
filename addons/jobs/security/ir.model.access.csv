@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_jobs_job_position,jobs.job_position,model_jobs_job_position,base.group_user,1,1,1,1
+access_jobs_job_category,jobs.job_category,model_jobs_job_category,base.group_user,1,1,1,1
