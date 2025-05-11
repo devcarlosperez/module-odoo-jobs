@@ -11,7 +11,7 @@
           <field name="description"/>
           <field name="code"/>
           <field name="estimated_salary"/>
-          <field name="start_date"/>
+          <field name="date_posted"/>
           <field name="job_type"/>
           <field name="department"/>
           <field name="category_id"/>

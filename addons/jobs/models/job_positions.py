@@ -10,7 +10,7 @@ class JobPosition(models.Model):
     description = fields.Char()
     code = fields.Char()
     estimated_salary = fields.Float()
-    start_date = fields.Date()
+    date_posted = fields.Date()
     job_type = fields.Selection([
         ('full_time', 'Full-time'),
         ('part_time', 'Part-time'),
