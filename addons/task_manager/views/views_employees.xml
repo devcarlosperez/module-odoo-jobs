@@ -12,6 +12,7 @@
           <field name="hire_date"/>
           <field name="country"/>
           <field name="task_ids"/>
+          <field name="job_position_id"/>
         </list>
       </field>
     </record>
